@@ -73,7 +73,7 @@
 	href="backend_resources/assets/data-tables/DT_bootstrap.css" />
 
 <!--right slidebar-->
-<link href=css/slidebars.css " rel="stylesheet">
+<link href="backend_resources/css/slidebars.css" rel="stylesheet">
 
 <!--toastr-->
 <link href="backend_resources/assets/toastr-master/toastr.css"
