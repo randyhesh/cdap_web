@@ -144,9 +144,16 @@
 		<!-- sidebar menu end-->
 	</div>
 	</aside> <!--sidebar end--> <!--main content start--> <section
-		id="main-content"> <section class="wrapper"> <!-- CONTENT -->
+		id="main-content"> <section class="wrapper"> 
+		
+		<!-- CONTENT -->
 
-	content <!-- END CONTENT --> </section> </section> <!--main content end--> <!--footer end-->
+	ensemble content comes here
+	
+	
+	<!-- END CONTENT --> 
+	
+	</section> </section> <!--main content end--> <!--footer end-->
 	</section>
 	<script>
 		

@@ -60,7 +60,8 @@
 <link
 	href="backend_resources/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css"
 	rel="stylesheet" type="text/css" media="screen" />
-<link rel="stylesheet" href="backend_resources/css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="backend_resources/css/owl.carousel.css"
+	type="text/css">
 
 <!--dynamic table-->
 <link
@@ -113,7 +114,7 @@
 		<div class="fa fa-bars tooltips" data-placement="right"
 			data-original-title="Toggle Navigation"></div>
 	</div>
-	<!--logo start--> <a href="#" class="logo"><img
+	<!--logo start--> <a href="index.jsp" class="logo"><img
 		src="uploads/logo.png"></a> <!--logo end-->
 
 	<div class="top-nav ">
@@ -149,24 +150,16 @@
 					class="fa fa-dashboard"></i> <span>Dashboard</span>
 			</a></li>
 
-			<!-- <li class="sub-menu"><a href="#" id="user_menu"> <i
-					class="fa fa-users"></i> <span>Users</span>
-			</a>
-				<ul class="sub">
-					<li><a href="#" onclick="">Manage Administrators</a></li>
-					<li><a href="#">Manage Registered Users</a></li>
-				</ul>
-			</li> -->
+			<li><a href="ensembleMain.jsp" id="ensembleMenu"> <i
+					class="fa fa-users"></i> <span>Ensemble</span>
+			</a></li>
 		</ul>
 
 
 		<!-- sidebar menu end-->
 	</div>
 	</aside> <!--sidebar end--> <!--main content start--> <section
-		id="main-content"> <section class="wrapper">
-		
-		
-		 <!-- CONTENT -->
+		id="main-content"> <section class="wrapper"> <!-- CONTENT -->
 
 	<div class="row">
 		<div class="col-sm-12">
@@ -199,10 +192,7 @@
 	</div>
 
 
-	<!-- END CONTENT --> 
-	
-	
-	</section> </section> <!--main content end--> <!--footer end--> </section>
+	<!-- END CONTENT --> </section> </section> <!--main content end--> <!--footer end--> </section>
 	<script>
 		
 	</script>
