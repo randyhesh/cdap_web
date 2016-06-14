@@ -145,7 +145,7 @@
 
 	<div class="row">
 		<div class="col-sm-12">
-			<section class="panel" style="margin-left:-212px"> 
+			<section class="panel" style="margin-left:-212px;height: 630px;"> 
 			
 			<form id="create-dataset-form" method="POST" enctype="multipart/form-data">
 			<div class="row" style="margin-left: 383px;margin-right: 420px;">
