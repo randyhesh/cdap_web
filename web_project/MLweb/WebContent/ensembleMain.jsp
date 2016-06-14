@@ -34,6 +34,21 @@
 	$(function() {
 		$('select.styled').customSelect();
 	});
+
+	function getResult() {
+
+		var streamingUrl = $('#streamingUrl').val();
+
+		$.ajax({
+			type : "POST",
+			url : 'DashboardController',
+			data : "streamingUrl=" + streamingUrl,
+			success : function(msg) {
+				$('#result_content').show();
+				$('#result').val(msg);
+			}
+		});
+	}
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -125,36 +140,46 @@
 		</ul>
 		<!--search & user info end-->
 	</div>
-	</header> <!--header end--> <!--sidebar start--> <aside>
-	<div id="sidebar" class="nav-collapse ">
-		<!-- sidebar menu start-->
+	</header> <!--header end--> <!--main content start--> <section id="main-content">
+	<section class="wrapper"> <!-- CONTENT -->
 
+	<div class="row">
+		<div class="col-sm-12">
+			<section class="panel" style="margin-left:-212px">
 
-		<ul class="sidebar-menu" id="nav-accordion">
-			<li><a href="dashboard.jsp" id="dashboardMenu"> <i
-					class="fa fa-dashboard"></i> <span>Dashboard</span>
-			</a></li>
+			<div class="row" style="margin-left: 383px; margin-right: 420px;">
 
-			<li><a href="ensembleMain.jsp" id="ensembleMenu"> <i
-					class="fa fa-users"></i> <span>Ensemble</span>
-			</a></li>
-		</ul>
+				<label class="text"> Algorithm </label>
 
+				<textarea class="form-control"></textarea>
 
-		<!-- sidebar menu end-->
+				<label class="text"> Ensemble Method</label> <select id="methods"
+					name="methods" class="form-control">
+					<option value="1">Stacking</option>
+					<option value="1">Bagging</option>
+					<option value="1">Boosting</option>
+				</select> <br />
+
+				<button class="btn btn-lg btn-login btn-block" type="submit">Apply
+					Ensemble</button>
+				<br />
+				<label class="text"> Result </label>
+
+				<textarea class="form-control"></textarea>
+				</br>
+				<label class="text"> Filename:
+				
+				<input type="text" class="form-control"  autofocus><button class="btn btn-lg btn-login btn-block" type="submit">Save</button>
+		 </label>
+		 <div class="row" style="margin-left: 383px; margin-right: 420px;"> <button class="btn btn-lg btn-login btn-block" type="submit">Browse</button>
+		 </div>
+			</div>
+
+			</section>
+		</div>
 	</div>
-	</aside> <!--sidebar end--> <!--main content start--> <section
-		id="main-content"> <section class="wrapper"> 
-		
-		<!-- CONTENT -->
 
-	ensemble content comes here
-	
-	
-	<!-- END CONTENT --> 
-	
-	</section> </section> <!--main content end--> <!--footer end-->
-	</section>
+	<!-- END CONTENT --> </section> </section> <!--main content end--> <!--footer end--> </section>
 	<script>
 		
 	</script>
