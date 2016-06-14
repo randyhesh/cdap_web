@@ -11,7 +11,7 @@
 <meta name="keyword" content="ML">
 <link rel="shortcut icon" href="backend_resources/img/favicon.html">
 
-<title>ML</title>
+<title>Machine Learner</title>
 
 
 <script>
@@ -145,36 +145,32 @@
 
 	<div class="row">
 		<div class="col-sm-12">
-			<section class="panel" style="margin-left:-212px">
-
-			<div class="row" style="margin-left: 383px; margin-right: 420px;">
-
-				<label class="text"> Algorithm </label>
-
-				<textarea class="form-control"></textarea>
-
-				<label class="text"> Ensemble Method</label> <select id="methods"
-					name="methods" class="form-control">
-					<option value="1">Stacking</option>
-					<option value="1">Bagging</option>
-					<option value="1">Boosting</option>
-				</select> <br />
-
-				<button class="btn btn-lg btn-login btn-block" type="submit">Apply
-					Ensemble</button>
-				<br />
-				<label class="text"> Result </label>
-
-				<textarea class="form-control"></textarea>
-				</br>
-				<label class="text"> Filename:
-				
-				<input type="text" class="form-control"  autofocus><button class="btn btn-lg btn-login btn-block" type="submit">Save</button>
-		 </label>
-		 <div class="row" style="margin-left: 383px; margin-right: 420px;"> <button class="btn btn-lg btn-login btn-block" type="submit">Browse</button>
-		 </div>
+			<section class="panel" style="margin-left:-212px;height: 630px;"> 
+			
+			<form id="create-dataset-form" method="POST" enctype="multipart/form-data">
+			<div class="row" style="margin-left: 383px;margin-right: 420px;">
+				<div class="form-group">
+					<label for="name">Dataset Name : <span
+						class="mandatory">*</span></label> <input id="streamingUrl"
+						name="streamingUrl" class="form-control" type="text"
+						placeholder="Enter Streaming URL">
+				</div>
+				<div class="form-group">
+					<label for="name">Description : <span
+						class="mandatory">*</span></label> <textarea id="streamingUrl"
+						name="streamingUrl" class="form-control" type="text"
+						placeholder="Enter Streaming URL"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="name">URL : <span
+						class="mandatory">*</span></label> <input id="streamingUrl"
+						name="streamingUrl" class="form-control" type="text"
+						placeholder="Enter Streaming URL">
+				</div>
+				<button type="button" class="btn btn-lg btn-login btn-block" >Create Dataset</button>
 			</div>
-
+			</form>
+			
 			</section>
 		</div>
 	</div>
