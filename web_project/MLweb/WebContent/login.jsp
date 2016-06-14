@@ -34,7 +34,6 @@
 	$(function() {
 		$('select.styled').customSelect();
 	});
-	
 
 	function getResult() {
 
@@ -141,46 +140,20 @@
 		</ul>
 		<!--search & user info end-->
 	</div>
-	</header> <!--header end--> 
-	 <!--main content start--> <section
-		id="main-content"> <section class="wrapper"> 
-		
-		 <!-- CONTENT -->
+	</header> <!--header end--> <!--main content start--> <section id="main-content">
+	<section class="wrapper"> <!-- CONTENT -->
 
 	<div class="row">
 		<div class="col-sm-12">
-			<section class="panel" style="margin-left:-212px"> <header class="panel-heading">
-			Dashboard <span class="tools pull-right"> <a
-				href="javascript:;" class="fa fa-chevron-down"></a>
-			</span> </header>
-			<div class="panel-body">
-
-				<div class="form-group">
-					<label for="name">Enter Streaming URL : <span
-						class="mandatory">*</span></label> <input id="streamingUrl"
-						name="streamingUrl" class="form-control" type="text"
-						placeholder="Enter Streaming URL">
-				</div>
-
-				<div class="form-group pull-right">
-					<button class="btn btn-success" id="submitBtn" name="submitBtn"
-						type="button" onclick="getResult()">Submit</button>
-				</div>
-
-				<div class="form-group" id="result_content" style="display: none;">
-					<label for="name">Result </label> <input id="result" name="result"
-						class="form-control" type="text">
-				</div>
-
-			</div>
+			<section class="panel" style="margin-left:-212px"> 
+			
+			content
+			
 			</section>
 		</div>
 	</div>
 
-	<!-- END CONTENT -->
-	
-		</section> </section> <!--main content end--> <!--footer end-->
-	</section>
+	<!-- END CONTENT --> </section> </section> <!--main content end--> <!--footer end--> </section>
 	<script>
 		
 	</script>
