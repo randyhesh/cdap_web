@@ -11,7 +11,7 @@
 <meta name="keyword" content="ML">
 <link rel="shortcut icon" href="backend_resources/img/favicon.html">
 
-<title>ML</title>
+<title>WSO2 Machine Learner</title>
 
 
 <script>
@@ -34,22 +34,6 @@
 	$(function() {
 		$('select.styled').customSelect();
 	});
-	
-
-	function getResult() {
-
-		var streamingUrl = $('#streamingUrl').val();
-
-		$.ajax({
-			type : "POST",
-			url : 'DashboardController',
-			data : "streamingUrl=" + streamingUrl,
-			success : function(msg) {
-				$('#result_content').show();
-				$('#result').val(msg);
-			}
-		});
-	}
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -134,53 +118,32 @@
 					<!-- <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
 					<li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
 					<li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li> -->
-					<li><a href="#"><i class="fa fa-key"></i> Log Out</a></li>
+					<li><a href="login.jsp"><i class="fa fa-key"></i> Log Out</a></li>
 				</ul></li>
 			<li class="sb-toggle-right"><i class="fa  fa-align-right"></i></li>
 			<!-- user login dropdown end -->
 		</ul>
 		<!--search & user info end-->
 	</div>
-	</header> <!--header end--> 
-	 <!--main content start--> <section
-		id="main-content"> <section class="wrapper"> 
-		
-		 <!-- CONTENT -->
+	</header> <!--header end--> <!--main content start--> <section id="main-content">
+	<section class="wrapper"> <!-- CONTENT -->
 
 	<div class="row">
 		<div class="col-sm-12">
-			<section class="panel" style="margin-left:-212px"> <header class="panel-heading">
-			Dashboard <span class="tools pull-right"> <a
-				href="javascript:;" class="fa fa-chevron-down"></a>
-			</span> </header>
-			<div class="panel-body">
+			<section class="panel" style="margin-left:-212px;height: 630px;">
 
-				<div class="form-group">
-					<label for="name">Enter Streaming URL : <span
-						class="mandatory">*</span></label> <input id="streamingUrl"
-						name="streamingUrl" class="form-control" type="text"
-						placeholder="Enter Streaming URL">
-				</div>
-
-				<div class="form-group pull-right">
-					<button class="btn btn-success" id="submitBtn" name="submitBtn"
-						type="button" onclick="getResult()">Submit</button>
-				</div>
-
-				<div class="form-group" id="result_content" style="display: none;">
-					<label for="name">Result </label> <input id="result" name="result"
-						class="form-control" type="text">
-				</div>
-
+			<div class="row" style="margin-left: 383px; margin-right: 420px;">
+				<br /> <a href="addNewDataset.jsp"> <img
+					src="uploads/dataset.PNG">
+				</a> <a href="addNewProject.jsp"> <img src="uploads/project.PNG">
+				</a>
 			</div>
+
 			</section>
 		</div>
 	</div>
 
-	<!-- END CONTENT -->
-	
-		</section> </section> <!--main content end--> <!--footer end-->
-	</section>
+	<!-- END CONTENT --> </section> </section> <!--main content end--> <!--footer end--> </section>
 	<script>
 		
 	</script>

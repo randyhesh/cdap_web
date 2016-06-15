@@ -35,20 +35,7 @@
 		$('select.styled').customSelect();
 	});
 
-	function getResult() {
 
-		var streamingUrl = $('#streamingUrl').val();
-
-		$.ajax({
-			type : "POST",
-			url : 'DashboardController',
-			data : "streamingUrl=" + streamingUrl,
-			success : function(msg) {
-				$('#result_content').show();
-				$('#result').val(msg);
-			}
-		});
-	}
 </script>
 
 <!-- Bootstrap core CSS -->
