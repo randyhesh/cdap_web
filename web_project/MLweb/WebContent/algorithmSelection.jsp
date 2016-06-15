@@ -30,13 +30,16 @@
 	});
 
 	//custom select box
-
 	$(function() {
 		$('select.styled').customSelect();
 	});
 
+	function login() {
 
+		window.location.href = "http://localhost:8080/MLweb/index.jsp";
+	}
 </script>
+
 
 <!-- Bootstrap core CSS -->
 <link href="backend_resources/css/bootstrap.min.css" rel="stylesheet">
@@ -101,12 +104,8 @@
 		<div class="fa fa-bars tooltips" data-placement="right"
 			data-original-title="Toggle Navigation"></div>
 	</div>
-	<!--logo start--> <div><a href="index.jsp" class="logo"><img
-		src="uploads/logo.png"></a></div>
-		<div > 
-		<a href="index.jsp" class="logo" ><img src="uploads/Capture.JPG" ></a>
-		</div>
-		 <!--logo end-->
+	<!--logo start--> <a href="index.jsp" class="logo"><img
+		src="uploads/logo.png"></a> <!--logo end-->
 
 	<div class="top-nav ">
 		<!--search & user info start-->
@@ -136,12 +135,26 @@
 
 	<div class="row">
 		<div class="col-sm-12">
-			<section class="panel" style="margin-left:-212px">
-			<div align="center">
-				<h2>Model</h2>
-				<br> <br> <label>Dataset Version</label> <br> <select>
-					<option value="svm data set 1.0.0">svm data set 1.0.0</option>
-				</select>
+			<section class="panel" style="margin-left:-212px;height: 630px;">
+
+			<div class="row" style="margin-left: 383px; margin-right: 420px;">
+				<h2>Algorithm</h2>
+				<hr>
+
+				<label for="name">Algorithm : <span class="mandatory">*</span></label>
+				<select class="form-control" name="algorithm">
+					<option value="">Select Algorithm </option>
+					<option>Algorithm 1</option>
+					<option>Algorithm 2</option>
+					<option>Algorithm 3</option>
+				</select> 
+				
+				<br/>
+				
+				<label for="name">Train Data Fraction : <span
+					class="mandatory">*</span></label> <input id="train_data_fraction"
+					name="train_data_fraction" class="form-control" type="text"
+					placeholder="Enter Train Data Fraction" value="0.7">
 			</div>
 
 			</section>
@@ -196,9 +209,6 @@
 	<script src="backend_resources/js/easy-pie-chart.js"></script>
 	<script src="backend_resources/js/count.js"></script>
 	<script src="backend_resources/js/form-component.js"></script>
-
-
-
 
 </body>
 
