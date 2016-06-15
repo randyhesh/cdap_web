@@ -33,7 +33,7 @@
 	$(function() {
 		$('select.styled').customSelect();
 	});
-
+	
 </script>
 
 
@@ -134,17 +134,17 @@
 			<section class="panel" style="margin-left:-212px;height: 630px;">
 
 			<div class="row" style="margin-left: 383px; margin-right: 420px;">
-				<h2>Model</h2>
+				<h2>Paramters</h2>
 				<hr>
 
-				<label for="name">Data Version : </label>
-				<select class="form-control" name="algorithm">
-					<option value="">Select Data Version </option>
-					<option selected="selected">Malware data - 1.0.0</option>
-				</select> 
-				
-				<br/>
-							
+				<label for="name">Iterations : <span class="mandatory">*</span></label>
+				<input id="iterations" name="iterations" class="form-control"
+					type="text" placeholder="Enter Iterations" value="100"> <br />
+
+				<label for="name">Learning Rate : <span class="mandatory">*</span></label>
+				<input id="learningRate" name="learningRate" class="form-control"
+					type="text" placeholder="Enter Learning Rate" value="0.001">
+
 			</div>
 
 			</section>
