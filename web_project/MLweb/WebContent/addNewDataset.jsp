@@ -150,17 +150,19 @@
 			
 			<form id="create-dataset-form" method="POST" enctype="multipart/form-data">
 			<div class="row" style="margin-left: 383px;margin-right: 420px;">
+			<h2>Create Dataset</h2>
+			<hr>
 				<div class="form-group">
 					<label for="name">Dataset Name : <span
 						class="mandatory">*</span></label> <input id="streamingUrl"
 						name="streamingUrl" class="form-control" type="text"
-						placeholder="Enter Streaming URL">
+						placeholder="Enter Dataset Name">
 				</div>
 				<div class="form-group">
 					<label for="name">Description : <span
 						class="mandatory">*</span></label> <textarea id="streamingUrl"
 						name="streamingUrl" class="form-control" type="text"
-						placeholder="Enter Streaming URL"></textarea>
+						placeholder="Enter Description"></textarea>
 				</div>
 				<div class="form-group">
 					<label for="name">URL : <span
@@ -168,7 +170,7 @@
 						name="streamingUrl" class="form-control" type="text"
 						placeholder="Enter Streaming URL">
 				</div>
-				<button type="button" class="btn btn-lg btn-login btn-block" >Create Dataset</button>
+				<button type="button" class="btn btn-main" style="background: rgb(108, 92, 118);color: white;">Create Dataset</button>
 			</div>
 			</form>
 			
