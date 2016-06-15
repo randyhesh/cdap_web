@@ -122,7 +122,7 @@
 					<input type="text" class="form-control" id="username"
 						placeholder="User ID" autofocus> <br /> <input
 						type="password" class="form-control" placeholder="Password">
-					<br/> <input class="btn btn-lg btn-login btn-success" type="button"
+					<br/> <input class="btn btn-lg btn-login" type="button" style="background: rgb(108, 92, 118);color: white;"
 						value="Sign in" name="sign_in" onclick="login()">
 				</div>
 			</div>
