@@ -95,12 +95,9 @@
 
 	<section id="container"> <!--header start--> <header
 		class="header white-bg">
-	<div class="sidebar-toggle-box">
-		<div class="fa fa-bars tooltips" data-placement="right"
-			data-original-title="Toggle Navigation"></div>
-	</div>
+	
 	<!--logo start--> <a href="index.jsp" class="logo"><img
-		src="uploads/logo.png"></a> <!--logo end-->
+		src="uploads/logo.png" style="width: 1495px;margin-left: -3px;height: 72px;margin-top: -16px;"></a> <!--logo end-->
 
 	<div class="top-nav ">
 		<!--search & user info start-->
@@ -120,7 +117,7 @@
 					<li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li> -->
 					<li><a href="login.jsp"><i class="fa fa-key"></i> Log Out</a></li>
 				</ul></li>
-			<li class="sb-toggle-right"><i class="fa  fa-align-right"></i></li>
+			
 			<!-- user login dropdown end -->
 		</ul>
 		<!--search & user info end-->
@@ -132,10 +129,10 @@
 		<div class="col-sm-12">
 			<section class="panel" style="margin-left:-212px;height: 630px;">
 
-			<div class="row" style="margin-left: 383px; margin-right: 420px;">
+			<div class="row" style="margin-left: 482px;margin-right: 420px;/* height: 337px; */">
 				<br /> <a href="addNewDataset.jsp"> <img
-					src="uploads/dataset.PNG">
-				</a> <a href="addNewProject.jsp"> <img src="uploads/project.PNG">
+					src="uploads/dataset.PNG" style="height: 266px;">
+				</a> <a href="addNewProject.jsp"> <img src="uploads/project.PNG" style="height: 266px;">
 				</a>
 			</div>
 

@@ -44,6 +44,10 @@
 		
 		window.location.href = "http://localhost:8080/MLweb/algorithmSelection.jsp";
 	}
+	
+	function ensemble(){
+		window.location.href = "http://localhost:8080/MLweb/ensembleMain.jsp";
+	}
 </script>
 
 
@@ -106,12 +110,9 @@
 
 	<section id="container"> <!--header start--> <header
 		class="header white-bg">
-	<div class="sidebar-toggle-box">
-		<div class="fa fa-bars tooltips" data-placement="right"
-			data-original-title="Toggle Navigation"></div>
-	</div>
+	
 	<!--logo start--> <a href="index.jsp" class="logo"><img
-		src="uploads/logo.png"></a> <!--logo end-->
+		src="uploads/logo.png" style="width: 1497px;/* margin-left: -94px; */height: 65px;margin-top: -16px;"></a> <!--logo end-->
 
 	<div class="top-nav ">
 		<!--search & user info start-->
@@ -131,19 +132,21 @@
 					<li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li> -->
 					<li><a href="#"><i class="fa fa-key"></i> Log Out</a></li>
 				</ul></li>
-			<li class="sb-toggle-right"><i class="fa  fa-align-right"></i></li>
+			
 			<!-- user login dropdown end -->
 		</ul>
 		<!--search & user info end-->
 	</div>
+	<a href="index.jsp" class="logo"><img
+		src="uploads/predicHeader.PNG" style="width: 1498px;margin-left: -77px;height: 59px;margin-top: 39px;"></a>
 	</header> <!--header end--> <!--main content start--> <section id="main-content">
 	<section class="wrapper"> <!-- CONTENT -->
 
 	<div class="row">
 		<div class="col-sm-12">
 			<section class="panel" style="margin-left:-212px;height: 630px;">
-
-			<div class="row" style="margin-left: 383px; margin-right: 420px;">
+	
+			<div class="row" style="margin-left: 383px;margin-right: 420px;margin-top: 55px;">
 				<h2>Predict</h2>
 				<hr>
 
@@ -155,7 +158,7 @@
 					 <br/> 
 					
 					<input
-					class="btn btn-lg btn-login btn-success" type="button"
+					class="btn btn-lg btn-login" type="button" style="background: rgb(108, 92, 118);color: white;"
 					value="Predict" name="predict" onclick="predict()"> 
 					
 					<br/>
@@ -170,8 +173,11 @@
 				<br/>
 
 				<input
-					class="btn btn-lg btn-login btn-success" type="button"
+					class="btn btn-lg btn-login" type="button" style="background: rgb(108, 92, 118);color: white;"
 					value="Try Another Algorithm" name="try_again" onclick="tryAgain()"> 
+					<input
+					class="btn btn-lg btn-login pull-right" type="button" style="background: rgb(108, 92, 118);color: white;"
+					value="Apply Ensemble" name="try_again" onclick="ensemble()">
 				</span>
 			</div>
 

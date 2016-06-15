@@ -114,7 +114,7 @@
 		
 	</div>
 	<!--logo start--> <a href="index.jsp" class="logo"><img
-		src="uploads/logo.png" style="width: 1495px;margin-left: -17px;height: 72px;margin-top: -16px;"></a> <!--logo end-->
+		src="uploads/logo.png" style="width: 1497px;margin-left: -18px;height: 63px;margin-top: -17px;"></a> <!--logo end-->
 
 	<div class="top-nav ">
 		<!--search & user info start-->
@@ -139,8 +139,8 @@
 		</ul>
 		<!--search & user info end-->
 	</div>
-	<a href="parameters.jsp" class="logo"><img
-		src="uploads/algorithmHeader.PNG" style="width: 1497px;margin-left: -94px;height: 58px;margin-top: 46px;"></a>
+	<a href="index.jsp" class="logo"><img
+		src="uploads/datasetHeader.PNG" style="width: 1495px;margin-left: -94px;height: 68px;margin-top: 36px;"></a>
 	</header> <!--header end--> <!--main content start--> <section id="main-content">
 	<section class="wrapper"> <!-- CONTENT -->
 
@@ -148,25 +148,12 @@
 		<div class="col-sm-12">
 			<section class="panel" style="margin-left:-212px;height: 630px;margin-top: 67px;"> 
 			
-			<div class="row" style="margin-left: 383px; margin-right: 420px;">
-				<h2>Algorithm</h2>
-				<hr>
-
-				<label for="name">Algorithm : <span class="mandatory">*</span></label>
-				<select class="form-control" name="algorithm">
-					<option value="">Select Algorithm </option>
-					<option>Algorithm 1</option>
-					<option>Algorithm 2</option>
-					<option>Algorithm 3</option>
-				</select> 
-				
-				<br/>
-				
-				<label for="name">Train Data Fraction : <span
-					class="mandatory">*</span></label> <input id="train_data_fraction"
-					name="train_data_fraction" class="form-control" type="text"
-					placeholder="Enter Train Data Fraction" value="0.7">
-			</div>
+			<a href="createProject.jsp" class="logo"><img
+		src="uploads/createDataset.PNG" style="margin-left: 611px;;"></a>
+			
+			
+			<a href="createProject.jsp" class="logo"><img
+		src="uploads/dataset2.PNG" style="width: 1448px;margin-left: -53px;height: 213px;margin-top: 64px;"></a>
 			
 			</section>
 		</div>

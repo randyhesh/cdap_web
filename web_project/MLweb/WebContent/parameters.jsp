@@ -11,7 +11,7 @@
 <meta name="keyword" content="ML">
 <link rel="shortcut icon" href="backend_resources/img/favicon.html">
 
-<title>ML</title>
+<title>Machine Learner</title>
 
 
 <script>
@@ -30,12 +30,26 @@
 	});
 
 	//custom select box
+
 	$(function() {
 		$('select.styled').customSelect();
 	});
-	
-</script>
 
+	function getResult() {
+
+		var streamingUrl = $('#streamingUrl').val();
+
+		$.ajax({
+			type : "POST",
+			url : 'DashboardController',
+			data : "streamingUrl=" + streamingUrl,
+			success : function(msg) {
+				$('#result_content').show();
+				$('#result').val(msg);
+			}
+		});
+	}
+</script>
 
 <!-- Bootstrap core CSS -->
 <link href="backend_resources/css/bootstrap.min.css" rel="stylesheet">
@@ -97,11 +111,10 @@
 	<section id="container"> <!--header start--> <header
 		class="header white-bg">
 	<div class="sidebar-toggle-box">
-		<div class="fa fa-bars tooltips" data-placement="right"
-			data-original-title="Toggle Navigation"></div>
+		
 	</div>
 	<!--logo start--> <a href="index.jsp" class="logo"><img
-		src="uploads/logo.png"></a> <!--logo end-->
+		src="uploads/logo.png" style="width: 1495px;margin-left: -17px;height: 72px;margin-top: -16px;"></a> <!--logo end-->
 
 	<div class="top-nav ">
 		<!--search & user info start-->
@@ -121,18 +134,20 @@
 					<li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li> -->
 					<li><a href="#"><i class="fa fa-key"></i> Log Out</a></li>
 				</ul></li>
-			<li class="sb-toggle-right"><i class="fa  fa-align-right"></i></li>
+			
 			<!-- user login dropdown end -->
 		</ul>
 		<!--search & user info end-->
 	</div>
+	<a href="Model.jsp" class="logo"><img
+		src="uploads/algorithmHeader.PNG" style="width: 1497px;margin-left: -94px;height: 58px;margin-top: 46px;"></a>
 	</header> <!--header end--> <!--main content start--> <section id="main-content">
 	<section class="wrapper"> <!-- CONTENT -->
 
 	<div class="row">
 		<div class="col-sm-12">
-			<section class="panel" style="margin-left:-212px;height: 630px;">
-
+			<section class="panel" style="margin-left:-212px;height: 630px;margin-top: 67px;"> 
+			
 			<div class="row" style="margin-left: 383px; margin-right: 420px;">
 				<h2>Paramters</h2>
 				<hr>
@@ -146,7 +161,7 @@
 					type="text" placeholder="Enter Learning Rate" value="0.001">
 
 			</div>
-
+			
 			</section>
 		</div>
 	</div>
@@ -199,6 +214,9 @@
 	<script src="backend_resources/js/easy-pie-chart.js"></script>
 	<script src="backend_resources/js/count.js"></script>
 	<script src="backend_resources/js/form-component.js"></script>
+
+
+
 
 </body>
 

@@ -49,6 +49,10 @@
 			}
 		});
 	}
+	
+	function allProject(){
+		window.location.href = "http://localhost:8080/MLweb/allProjects.jsp";
+	}
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -139,8 +143,8 @@
 		</ul>
 		<!--search & user info end-->
 	</div>
-	<a href="parameters.jsp" class="logo"><img
-		src="uploads/algorithmHeader.PNG" style="width: 1497px;margin-left: -94px;height: 58px;margin-top: 46px;"></a>
+	<a href="index.jsp" class="logo"><img
+		src="uploads/projectHeader.PNG" style="width: 1497px;margin-left: -94px;height: 58px;margin-top: 46px;"></a>
 	</header> <!--header end--> <!--main content start--> <section id="main-content">
 	<section class="wrapper"> <!-- CONTENT -->
 
@@ -148,25 +152,32 @@
 		<div class="col-sm-12">
 			<section class="panel" style="margin-left:-212px;height: 630px;margin-top: 67px;"> 
 			
-			<div class="row" style="margin-left: 383px; margin-right: 420px;">
-				<h2>Algorithm</h2>
-				<hr>
-
-				<label for="name">Algorithm : <span class="mandatory">*</span></label>
-				<select class="form-control" name="algorithm">
-					<option value="">Select Algorithm </option>
-					<option>Algorithm 1</option>
-					<option>Algorithm 2</option>
-					<option>Algorithm 3</option>
+			<form id="create-dataset-form" method="POST" enctype="multipart/form-data">
+			<div class="row" style="margin-left: 383px;margin-right: 420px;">
+			<h2>Create Dataset</h2>
+			<hr>
+				<div class="form-group">
+					<label for="name">Project Name : <span
+						class="mandatory">*</span></label> <input id="streamingUrl"
+						name="streamingUrl" class="form-control" type="text"
+						placeholder="e.g MyDataProject">
+				</div>
+				<div class="form-group">
+					<label for="name">Description : <span
+						class="mandatory">*</span></label> <textarea id="streamingUrl"
+						name="streamingUrl" class="form-control" type="text"
+						placeholder=""></textarea>
+				</div>
+				<div class="form-group">
+				<label for="name">Dataset : <span class="mandatory">*</span></label>
+				<select class="form-control" name="algorithm" readOnly="true">
+					<option value="">Malware data </option>					
 				</select> 
 				
-				<br/>
-				
-				<label for="name">Train Data Fraction : <span
-					class="mandatory">*</span></label> <input id="train_data_fraction"
-					name="train_data_fraction" class="form-control" type="text"
-					placeholder="Enter Train Data Fraction" value="0.7">
+				</div>
+				<button type="button" class="btn btn-main" style="background: rgb(108, 92, 118);color: white;" onClick=allProject()>Create Project</button>
 			</div>
+			</form>
 			
 			</section>
 		</div>

@@ -49,6 +49,10 @@
 			}
 		});
 	}
+	
+	function create(){
+		window.location.href = "http://localhost:8080/MLweb/allDataset.jsp";
+	}
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -140,7 +144,7 @@
 		<!--search & user info end-->
 	</div>
 	<a href="index.jsp" class="logo"><img
-		src="uploads/Header.PNG" style="width: 1495px;margin-left: -94px;height: 72px;margin-top: 46px;"></a>
+		src="uploads/Header.PNG" style="width: 1497px;margin-left: -94px;height: 58px;margin-top: 46px;"></a>
 	</header> <!--header end--> <!--main content start--> <section id="main-content">
 	<section class="wrapper"> <!-- CONTENT -->
 
@@ -170,7 +174,7 @@
 						name="streamingUrl" class="form-control" type="text"
 						placeholder="Enter Streaming URL">
 				</div>
-				<button type="button" class="btn btn-main" style="background: rgb(108, 92, 118);color: white;">Create Dataset</button>
+				<button type="button" class="btn btn-main" style="background: rgb(108, 92, 118);color: white;" onClick=create()>Create Dataset</button>
 			</div>
 			</form>
 			
