@@ -1,22 +1,19 @@
 package controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.Timer;
 
 /**
  * Servlet implementation class RequestController
@@ -97,23 +94,18 @@ public class RequestController extends HttpServlet {
 		}
 		sb.append('\n');
 
-		
-		//for every 3 secs get request and fill feature table
-		Timer timer = new Timer(30, new ActionListener() {
-
+		// for every 3 secs get request and fill feature table
+		Timer t = new Timer();
+		t.schedule(new TimerTask() {
 			@Override
-			public void actionPerformed(ActionEvent e) {
+			public void run() {
 				try {
 					getRequestTimely(pw, sb, request, response);
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-
 			}
-		});
-		timer.setRepeats(false); // Only execute once
-		timer.start();
+		}, 0, 3000);
 
 		pw.write(sb.toString());
 		pw.close();
@@ -136,7 +128,7 @@ public class RequestController extends HttpServlet {
 
 			// get value according to needed header
 			if (Arrays.stream(headers).anyMatch(key::equals)) {
-				out.print("<br>KR = " + key + ", VR = " + value);
+				out.print("<br>RK = " + key + ", RV = " + value);
 
 				// if value contains comma replace it with "|"
 				value = value.replace(",", "|");
