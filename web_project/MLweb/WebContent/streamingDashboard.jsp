@@ -35,20 +35,38 @@
 		$('select.styled').customSelect();
 	});
 
-	function getResult() {
+	function fetchData() {	
 
 		var streamingUrl = $('#streamingUrl').val();
 
 		$.ajax({
 			type : "POST",
 			url : 'RequestController',
-			data : "streamingUrl=" + streamingUrl,
+			data : "streamingUrl=" + streamingUrl + "&func=" + 2,
+			success : function(msg) {
+				$('#result').append(msg);
+			}
+		});
+
+	}	
+
+	function getResult() {
+		
+		var streamingUrl = $('#streamingUrl').val();
+
+		$.ajax({
+			type : "POST",
+			url : 'RequestController',
+			data : "streamingUrl=" + streamingUrl + "&func=" + 1,
 			success : function(msg) {
 				$('#result_content').show();
 				$('#result').html(msg);
+
+				setInterval(fetchData, 1000);
 			}
 		});
 	}
+	
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -182,7 +200,8 @@
 				</div>
 
 				<div class="form-group" id="result_content" style="display: none;">
-					<label for="name">Result </label> <p id="result" name="result"></p>]						
+					<label for="name">Result </label>
+					<p id="result" name="result"></p>
 				</div>
 
 			</div>

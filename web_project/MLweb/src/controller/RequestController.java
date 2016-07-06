@@ -1,6 +1,8 @@
 package controller;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -30,7 +32,6 @@ public class RequestController extends HttpServlet {
 	 */
 	public RequestController() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -50,15 +51,24 @@ public class RequestController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		handleRequest("D:/ML/cdap_web/web_project/feature_table.csv", request, response);
+		String filePath = "D:/ML/cdap_web/web_project/feature_table.csv";
+		PrintWriter out = response.getWriter();
+		String val = request.getParameter("func");
+
+		if (val.equals("1")) {
+			out.print("<br>header n value");
+			handleRequest(out, filePath, request, response);
+
+		} else {
+			out.print("<br>repeat value");
+			getRequestTimely(out, filePath, request, response);
+		}
 	}
 
-	private void handleRequest(String filePath, HttpServletRequest request, HttpServletResponse response)
-			throws IOException {
+	private void handleRequest(PrintWriter out, String filePath, HttpServletRequest request,
+			HttpServletResponse response) throws IOException {
 
-		PrintWriter out = response.getWriter();
-		PrintWriter pw = new PrintWriter(new File(filePath));
-		StringBuilder sb = new StringBuilder();
+		FileWriter fw = new FileWriter(filePath);
 
 		// arrays to store headers and its values
 		ArrayList<String> headerList = new ArrayList<>();
@@ -82,40 +92,31 @@ public class RequestController extends HttpServlet {
 			}
 		}
 
+		String headerLine = "";
 		for (String header : headerList) {
-			sb.append(header);
-			sb.append(',');
+			headerLine += header;
+			headerLine += ",";
 		}
-		sb.append('\n');
+		headerLine += "\n";
+		fw.append(headerLine);
 
+		String valueLine = "";
 		for (String value : valueList) {
-			sb.append(value);
-			sb.append(',');
+			valueLine += value;
+			valueLine += ",";
 		}
-		sb.append('\n');
+		valueLine += "\n";
+		fw.append(valueLine);
 
-		// for every 3 secs get request and fill feature table
-		Timer t = new Timer();
-		t.schedule(new TimerTask() {
-			@Override
-			public void run() {
-				try {
-					getRequestTimely(pw, sb, request, response);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-			}
-		}, 0, 3000);
-
-		pw.write(sb.toString());
-		pw.close();
+		fw.close();
 
 	}
 
-	private void getRequestTimely(PrintWriter pw, StringBuilder sb, HttpServletRequest request,
+	private void getRequestTimely(PrintWriter out, String filePath, HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
 
-		PrintWriter out = response.getWriter();
+		FileWriter fw = new FileWriter(filePath, true);
+		BufferedWriter bw = new BufferedWriter(fw);
 
 		// arrays to store headers and its values
 		ArrayList<String> valueList = new ArrayList<>();
@@ -136,11 +137,15 @@ public class RequestController extends HttpServlet {
 			}
 		}
 
+		String valueLine = "";
 		for (String value : valueList) {
-			sb.append(value);
-			sb.append(',');
+			valueLine += value;
+			valueLine += ",";
 		}
-		sb.append('\n');
+		valueLine += "\n";
 
+		bw.write(valueLine);
+
+		bw.close();
 	}
 }
