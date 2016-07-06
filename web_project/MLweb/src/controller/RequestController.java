@@ -92,18 +92,31 @@ public class RequestController extends HttpServlet {
 			}
 		}
 
+		int index = 0;
 		String headerLine = "";
 		for (String header : headerList) {
+
+			if (index != 0) {
+				headerLine += ",";
+			}
+			index++;
+
 			headerLine += header;
-			headerLine += ",";
 		}
 		headerLine += "\n";
 		fw.append(headerLine);
 
+		index = 0;
 		String valueLine = "";
 		for (String value : valueList) {
+
+			if (index != 0) {
+				valueLine += ",";
+			}
+			index++;
+
 			valueLine += value;
-			valueLine += ",";
+
 		}
 		valueLine += "\n";
 		fw.append(valueLine);
@@ -137,10 +150,17 @@ public class RequestController extends HttpServlet {
 			}
 		}
 
+		int index = 0;
 		String valueLine = "";
 		for (String value : valueList) {
+
+			if (index != 0) {
+				valueLine += ",";
+			}
+			index++;
+
 			valueLine += value;
-			valueLine += ",";
+
 		}
 		valueLine += "\n";
 
